@@ -6,7 +6,7 @@
         <title>Document</title>
     </head> 
     <body>
-        <canvas id="cvs" height="500" width="500">Hello world</canvas>
+        <canvas id="cvs" height="200" width="200">circle</canvas>
     </body>
     <script>
         var smooth = 100;
@@ -14,7 +14,7 @@
         var cv = cvs.getContext("2d");
         var bd = document.body;
         
-        cv.lineWidth=10;
+        
 
         addEventListener("scroll",smth());
         function smth(){
@@ -23,17 +23,17 @@
             cv.clearRect(0,0,cvs.width,cvs.height);
             cv.beginPath();
             var ac = (Math.abs(acc) / 5);
+            cv.lineWidth= 10
 
-            cv.arc(250,250,60*(ac+1),0,(ac)*Math.PI);
+            cv.arc(100,100,60*(ac/5+1),0,(ac)*Math.PI);
             cv.strokeStyle = "#FF0000";
             cv.stroke();
             cv.beginPath();
 
-            cv.arc(250,250,50*(ac+1),0,(smooth/(bd.scrollHeight/3)*Math.PI));
+            cv.arc(100,100,50*(ac/5+1),0,(smooth/(bd.scrollHeight-window.innerHeight)*2*Math.PI));
             cv.strokeStyle = "#00AA00";
             cv.stroke();
             cv.beginPath();
-            
             setTimeout(smth,1);
         }
     </script>

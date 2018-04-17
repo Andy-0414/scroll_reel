@@ -1,6 +1,7 @@
 body{
     height: 2000px;
     -ms-overflow-style: none;
+    background: linear-gradient(white,skyblue);
 }
 #cvs{
     position: fixed;
