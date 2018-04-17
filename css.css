@@ -1,7 +1,20 @@
 body{
     height: 2000px;
-    -ms-overflow-style: none;
     background: linear-gradient(white,skyblue);
+}
+::-webkit-scrollbar{
+    width: 1%;
+}
+::-webkit-scrollbar-track {
+      background-color: gainsboro;
+}
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+}
+ 
+::-webkit-scrollbar-button {
+      background-color: grey;
 }
 #cvs{
     position: fixed;
